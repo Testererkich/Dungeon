@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dungeon Crawler</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel panel-left">
+        <h1>Dungeon Crawler</h1>
+        <p class="subtitle">2D browser-spil med klasser, loot og levels</p>
+
+        <div class="field">
+          <label for="classSelect">Vælg klasse</label>
+          <select id="classSelect"></select>
+        </div>
+
+        <button id="newGameBtn">Nyt Spil</button>
+
+        <div class="stats" id="playerStats"></div>
+
+        <div class="inventory-section">
+          <h2>Inventory</h2>
+          <div id="inventory" class="inventory"></div>
+        </div>
+      </section>
+
+      <section class="panel panel-center">
+        <h2>Dungeon</h2>
+        <canvas id="gameCanvas" width="640" height="640" aria-label="Dungeon map"></canvas>
+        <p class="hint">WASD eller piletaster for at bevæge dig</p>
+      </section>
+
+      <section class="panel panel-right">
+        <h2>Log</h2>
+        <div id="eventLog" class="event-log"></div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
